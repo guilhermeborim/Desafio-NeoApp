@@ -1,12 +1,37 @@
-# React + Vite
+# Marvel Comics Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Loja virtual de quadrinhos da Marvel feita com React + Vite, estilização com Styled Components e gerenciamento de estado com Redux Toolkit. O projeto consome a [API oficial da Marvel](https://developer.marvel.com/) e simula funcionalidades de uma loja real como carrinho, visualização de detalhes, cupom de desconto.
 
-Currently, two official plugins are available:
+## 🚀 Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🔍 Listagem de HQs direto da API da Marvel
+- 🛒 Carrinho de compras lateral com gerenciamento global via Redux
+- 💬 Cupom de desconto com lógica de validação separada (pasta `helpers`)
+- 💅 Estilização com Styled Components
+- ⚙️ Preparação com Docker (opcional)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tecnologias Utilizadas
+
+- [ReactJS](https://reactjs.org/) com [Vite](https://vitejs.dev/)
+- [Redux Toolkit](https://redux-toolkit.js.org/)
+- [Styled Components](https://styled-components.com/)
+- [Lucide Icons](https://lucide.dev/)
+- [Docker](https://www.docker.com/)
+
+## 🧩 Estrutura de Pastas
+
+src/
+├── assets/ # Imagens e logos
+├── components/ # Componentes reutilizáveis (Header, Card, etc.)
+├── features/ # Páginas principais e estilização (Home, Detalhes, etc.)
+├── slices/ # Store + Slices
+├── routes/ # Rotas da aplicação
+├── helpers/ # Lógicas isoladas (ex: validação de cupom)
+
+---
+
+## 🐳 Docker
+
+Este projeto conta com um `Dockerfile` para facilitar o deploy em ambientes que suportam containers. A Vercel **não suporta** diretamente containers Docker, mas o Docker foi incluído no projeto para fins de **demonstração técnica**.
