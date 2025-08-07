@@ -2,7 +2,7 @@
 
 Loja virtual de quadrinhos da Marvel feita com React + Vite, estilização com Styled Components e gerenciamento de estado com Redux Toolkit. O projeto consome a [API oficial da Marvel](https://developer.marvel.com/) e simula funcionalidades de uma loja real como carrinho, visualização de detalhes, cupom de desconto.
 
-## 🚀 Funcionalidades
+## Funcionalidades
 
 - 🔍 Listagem de HQs direto da API da Marvel
 - 🛒 Carrinho de compras lateral com gerenciamento global via Redux
@@ -12,7 +12,7 @@ Loja virtual de quadrinhos da Marvel feita com React + Vite, estilização com S
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - [ReactJS](https://reactjs.org/) com [Vite](https://vitejs.dev/)
 - [Redux Toolkit](https://redux-toolkit.js.org/)
@@ -20,7 +20,7 @@ Loja virtual de quadrinhos da Marvel feita com React + Vite, estilização com S
 - [Lucide Icons](https://lucide.dev/)
 - [Docker](https://www.docker.com/)
 
-## 🧩 Estrutura de Pastas
+## Estrutura de Pastas
 
 src/
 ├── assets/ # Imagens e logos
@@ -32,6 +32,6 @@ src/
 
 ---
 
-## 🐳 Docker
+## Docker
 
 Este projeto conta com um `Dockerfile` para facilitar o deploy em ambientes que suportam containers. A Vercel **não suporta** diretamente containers Docker, mas o Docker foi incluído no projeto para fins de **demonstração técnica**.
