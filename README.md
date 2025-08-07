@@ -35,3 +35,9 @@ src/
 ## Docker
 
 Este projeto conta com um `Dockerfile` para facilitar o deploy em ambientes que suportam containers. A Vercel **não suporta** diretamente containers Docker, mas o Docker foi incluído no projeto para fins de **demonstração técnica**.
+
+## Cupons de Desconto para testar na Aplicação
+
+### RARO10
+
+### COMUM20
