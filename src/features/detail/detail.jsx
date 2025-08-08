@@ -1,8 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Navigate, useParams } from "react-router";
 import CartDrawer from "../../components/cart/cart";
-import Footer from "../../components/footer/footer";
-import Header from "../../components/header/header";
 import { addItem, toggleCart } from "../../slices/cart/slice";
 import {
   BuyButton,
@@ -30,7 +28,6 @@ function Detail() {
 
   return (
     <>
-      <Header />
       <CartDrawer />
       <DetailContainer>
         <ComicImage
@@ -48,7 +45,6 @@ function Detail() {
           </BuyButton>
         </ComicInfo>
       </DetailContainer>
-      <Footer />
     </>
   );
 }
