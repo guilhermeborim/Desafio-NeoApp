@@ -13,20 +13,45 @@ const getAuthParams = () => {
 
 export const fetchComics = async () => {
   const { ts, apikey, hash } = getAuthParams();
-  const response = await axios.get(`${BASE_URL}/comics`, {
-    params: {
-      ts,
-      apikey,
-      hash,
-    },
-  });
-  return response.data.data.results;
+  try {
+    const response = await axios.get(`${BASE_URL}/comics`, {
+      params: {
+        ts,
+        apikey,
+        hash,
+      },
+    });
+    return response.data.data.results;
+  } catch (error) {
+    console.error({
+      message: error.message,
+      stack: error.stack,
+    });
+
+    throw new Error(
+      error.response?.data?.status || error.message || "Ocorreu um erro"
+    );
+  }
 };
 
 export const fetchComicById = async (id) => {
-  const { ts, apikey, hash } = getAuthParams();
-  const response = await axios.get(`${BASE_URL}/comics/${id}`, {
-    params: { ts, apikey, hash },
-  });
-  return response.data.data.results[0];
+  try {
+    if (!id) {
+      throw new Error("ID da comic não fornecido");
+    }
+    const { ts, apikey, hash } = getAuthParams();
+    const response = await axios.get(`${BASE_URL}/comics/${id}`, {
+      params: { ts, apikey, hash },
+    });
+    return response.data.data.results[0];
+  } catch (error) {
+    console.error({
+      message: error.message,
+      stack: error.stack,
+    });
+
+    throw new Error(
+      error.response?.data?.status || error.message || "Ocorreu um erro"
+    );
+  }
 };
